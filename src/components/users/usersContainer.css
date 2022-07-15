@@ -1,0 +1,8 @@
+.usersContainer{
+  color: #eeeeee;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5rem;
+  
+}

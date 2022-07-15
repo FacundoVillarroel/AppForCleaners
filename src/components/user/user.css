@@ -1,0 +1,8 @@
+.userContainer{
+  height: fit-content;
+  padding: 2rem;
+  border: 2px solid #ff5722;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}

@@ -7,3 +7,12 @@
 html {
 font-size: 62.5%;
 }
+
+#root{  
+  background-color: #303841;
+  color: #eeeeee;
+}
+
+.title{
+  color: #00adb5;
+}
