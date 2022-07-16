@@ -34,10 +34,7 @@ const CalendarContainer = () => {
         }
       }
       if (customer.frequency === "biWeekly"){
-        event.recurring = {
-          repeat: "weekly",
-          inverval: 2
-        }
+        event.recurring = "FREQ=WEEKLY;INTERVAL=2"
       }
         
       events.push(event)
@@ -46,7 +43,7 @@ const CalendarContainer = () => {
   
   useEffect(() => {
       setEvents(events)
-  }, [currentUser]);
+  }, [currentUser, usersList]);
   
   const onEventClick = React.useCallback((event) => {
       toast({
