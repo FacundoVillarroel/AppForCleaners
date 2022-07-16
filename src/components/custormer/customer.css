@@ -1,11 +1,27 @@
 .customerContainer{
   border: 2px solid #ff5722;
   border-radius: 3rem;
-  padding: 4rem;
+  padding: 2rem;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .customerData{
-  text-align: center;
+}
+
+.customerData div{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+.info{
+  width: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+.bold{
+  font-weight: 700;
+  width: 80%;
 }

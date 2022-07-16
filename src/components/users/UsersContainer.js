@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
 
 import "./usersContainer.css"
 
 import User from '../user/User';
 
-const UsersContainer = ({usersList, setCurrentUser}) => {
+const UsersContainer = () => {
+
+  const { usersList } = useContext( UserContext )
 
   return (
     <div className="usersContainer">
       {usersList.map((user, key) => {
-          return <User user={user} key={key} setCurrentUser={setCurrentUser}/>
+          return <User user={user} key={key}/>
       })}
     </div>
   )

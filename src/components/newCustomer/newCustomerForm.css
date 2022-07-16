@@ -3,11 +3,50 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3rem;
 }
+
 input, select {
-  border-color: #ff5722;
+  border: solid #ff5722 .15rem;
   padding: 1rem;
   margin-top: 2rem;
   border-radius: 2rem;
   width: 50%;
+}
+
+.btnSend{
+  font-size: 1.5rem;
+  border-style:solid;
+  background-color: #ff5722;
+  color: #eeee;
+  border-color: #ff5722;
+  margin-top: 5rem;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 2rem;
+}
+
+.btnSend:hover{
+  background-color: #eeee;
+  color: #ff5722;
+  border-color: #ff5722;
+}
+
+.customerAddedContainer{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.btnAdd{
+  border: #ff5722 solid .2rem;
+  border-radius: 2rem;
+  color: #303841;
+  padding: .8rem;
+}
+
+.btnAdd:hover {
+  background-color: #ff5722;
+  color: #eeee;
 }
