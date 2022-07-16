@@ -1,15 +1,52 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-import { Eventcalendar, getJson, toast, localeDe } from '@mobiscroll/react';
+import "./calendarContainer.css"
+import { Eventcalendar, toast, localeDe } from '@mobiscroll/react';
+import { UserContext } from '../../context/UserContext';
+
+import endTime from '../../utils/endTime';
+
 
 const CalendarContainer = () => {
+
+  const { usersList, currentUser } = useContext(UserContext)
+
   const [myEvents, setEvents] = React.useState([]);
+
+  const user = usersList.find(user => user.name === currentUser)
+
+  const customers = user.customers
+
+  let events = []
+
+    customers.forEach(customer => {
+      let { date, time } = customer.nextCleaning;
+      let event = {
+        start: `${date}T${time}:00.000Z`,
+        end: `${date}T${endTime(time, parseFloat(customer.hours))}:00.000Z`,
+        title: customer.name,
+        color: "#00adb5",
+      }
+
+      if (customer.frequency === "weekly"){
+        event.recurring = {
+          repeat: "weekly"
+        }
+      }
+      if (customer.frequency === "biWeekly"){
+        event.recurring = {
+          repeat: "weekly",
+          inverval: 2
+        }
+      }
+        
+      events.push(event)
+    });
+
   
-  React.useEffect(() => {
-      getJson('https://trial.mobiscroll.com/events/?vers=5', (events) => {
-          setEvents(events);
-      }, 'jsonp');
-  }, []);
+  useEffect(() => {
+      setEvents(events)
+  }, [currentUser]);
   
   const onEventClick = React.useCallback((event) => {
       toast({
@@ -29,7 +66,7 @@ const CalendarContainer = () => {
       <h2 className='text-center pt-5 mb-5 title'>CALENDAR</h2>
       <Eventcalendar
         theme="ios" 
-        themeVariant="light"
+        themeVariant="dark"
         clickToCreate={false}
         dragToCreate={false}
         dragToMove={false}

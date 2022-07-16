@@ -19,7 +19,7 @@ const Body = () => {
         <UsersContainer/>
         { currentUser && 
           <>
-            {/* <CalendarContainer/> */}
+            <CalendarContainer/>
             <CustomersContainer/>
             <NewCustomerForm />
           </>
