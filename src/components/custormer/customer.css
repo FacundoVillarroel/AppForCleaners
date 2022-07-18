@@ -6,7 +6,19 @@
   margin-bottom: 1rem;
 }
 
-.customerData{
+.customerName{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btnDeleteUser{
+  height: fit-content;
+  padding:.6rem .8rem;
+  border: solid #eeee .1rem;
+  border-radius: 2rem;
+  color: #eeee;
+  background-color: #ff5722;
 }
 
 .customerData div{
