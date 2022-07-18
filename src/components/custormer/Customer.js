@@ -13,24 +13,34 @@ const Customer = ({customer}) => {
   const {name, address, nextCleaning, hours, frequency} = customer
 
   const removeItem = async (name, usersList, currentUser) => {
-    const userId = (usersList.find(user => user.name === currentUser)).id
-    
-    const batch = writeBatch(db);
-    const docRef = doc(db , "usersList", userId)
-    const userFirebase = (await getDoc(docRef))
-    const customers = userFirebase.data().customers
-    const updatedCustomers = customers.filter(customer => customer.name !== name);
-    batch.update(userFirebase.ref, {
-      customers: updatedCustomers
-    })
-    await batch.commit()
-    const usersListRef = collection( db, "usersList" );
-    
-    getDocs( usersListRef )
-      .then( resp => {
-        const usersListFirebase = resp.docs.map((doc) => ({id:doc.id, ...doc.data()}))
-        setUsersList(usersListFirebase)
+
+    let answer;
+    if(window.confirm("Do you want to delete this user?")) {
+      answer = true
+    } else {
+      answer = false
+    }
+
+    if(answer){
+      const userId = (usersList.find(user => user.name === currentUser)).id
+      
+      const batch = writeBatch(db);
+      const docRef = doc(db , "usersList", userId)
+      const userFirebase = (await getDoc(docRef))
+      const customers = userFirebase.data().customers
+      const updatedCustomers = customers.filter(customer => customer.name !== name);
+      batch.update(userFirebase.ref, {
+        customers: updatedCustomers
       })
+      await batch.commit()
+      const usersListRef = collection( db, "usersList" );
+      
+      getDocs( usersListRef )
+        .then( resp => {
+          const usersListFirebase = resp.docs.map((doc) => ({id:doc.id, ...doc.data()}))
+          setUsersList(usersListFirebase)
+        })
+    } 
   }
 
   return (
