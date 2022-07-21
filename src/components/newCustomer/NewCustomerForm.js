@@ -3,8 +3,6 @@ import React, { useContext, useState } from 'react';
 import { UserContext } from '../../context/UserContext';
 import { db } from '../../firebase/config';
 
-import "./newCustomerForm.css";
-
 const NewCustomerForm = () => {
   const [messageSent, setMessageSent ] = useState(false)
 

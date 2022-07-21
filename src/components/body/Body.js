@@ -14,8 +14,7 @@ const Body = () => {
 
   return (
     <div>
-      <div className="container body">
-        <h1 className='text-center pt-5 title'>USERS</h1>
+      <div className="container">
         <UsersContainer/>
         { currentUser && 
           <>

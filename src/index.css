@@ -1,18 +1,106 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
-#root{  
+#root {
   background-color: #303841;
-  color: #eeeeee;
-}
+  color: #eeeeee; }
 
-.title{
-  color: #00adb5;
-}
+.title {
+  color: #00adb5; }
+
+.usersContainer {
+  width: 100%;
+  padding-bottom: 5rem; }
+  .usersContainer .usersFlex {
+    display: flex;
+    justify-content: space-evenly; }
+    .usersContainer .usersFlex .userContainer {
+      padding: 2rem;
+      border: 2px solid #ff5722;
+      border-radius: 2rem;
+      cursor: pointer;
+      margin-top: 3rem; }
+      .usersContainer .usersFlex .userContainer h1 {
+        margin: 0; }
+    .usersContainer .usersFlex .currentUser {
+      color: #eeee;
+      background-color: #ff5722; }
+
+.calendarContainer {
+  height: 80vh;
+  margin-bottom: 10rem; }
+
+.customerContainer {
+  border: 2px solid #ff5722;
+  border-radius: 3rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+  .customerContainer .customerName {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; }
+    .customerContainer .customerName .btnDeleteUser {
+      height: fit-content;
+      padding: .6rem .8rem;
+      border: solid #eeee .1rem;
+      border-radius: 2rem;
+      color: #eeee;
+      background-color: #ff5722; }
+  .customerContainer .customerData div {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem; }
+    .customerContainer .customerData div .info {
+      width: 80%;
+      padding: 0;
+      margin: 0; }
+    .customerContainer .customerData div .bold {
+      font-weight: 700;
+      width: 80%; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem; }
+  .form input, .form select {
+    border: solid #ff5722 .15rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    width: 50%; }
+  .form .btnSend {
+    font-size: 1.5rem;
+    border-style: solid;
+    background-color: #ff5722;
+    color: #eeee;
+    border-color: #ff5722;
+    margin-top: 5rem;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 2rem; }
+    .form .btnSend:hover {
+      background-color: #eeee;
+      color: #ff5722;
+      border-color: #ff5722; }
+
+.customerAddedContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly; }
+  .customerAddedContainer .btnAdd {
+    border: #ff5722 solid .2rem;
+    border-radius: 2rem;
+    color: #303841;
+    padding: .8rem; }
+    .customerAddedContainer .btnAdd:hover {
+      background-color: #ff5722;
+      color: #eeee; }

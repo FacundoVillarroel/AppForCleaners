@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 
-import "./usersContainer.css"
-
 import User from '../user/User';
 
 const UsersContainer = () => {
@@ -11,9 +9,12 @@ const UsersContainer = () => {
 
   return (
     <div className="usersContainer">
-      {usersList.map((user, key) => {
-          return <User user={user} key={key}/>
-      })}
+      <h1 className='text-center pt-5 title'>USERS</h1>
+      <div className='usersFlex'>
+        {usersList.map((user, key) => {
+            return <User user={user} key={key}/>
+        })}
+      </div>
     </div>
   )
 }

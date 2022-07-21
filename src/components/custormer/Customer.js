@@ -3,7 +3,6 @@ import {BsFillTrashFill} from "react-icons/bs";
 import { doc, getDoc, collection, getDocs, writeBatch } from 'firebase/firestore';
 import {db} from "../../firebase/config";
 
-import "./customer.css";
 import { UserContext } from '../../context/UserContext';
 
 const Customer = ({customer}) => {

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-import "./calendarContainer.css"
 import { Eventcalendar, toast, localeDe } from '@mobiscroll/react';
 import { UserContext } from '../../context/UserContext';
 

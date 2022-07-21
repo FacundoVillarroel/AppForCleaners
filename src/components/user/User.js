@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 
-import "./user.css";
-
 const User = ({user}) => {
 
   const { currentUser, setCurrentUser } = useContext(UserContext)
