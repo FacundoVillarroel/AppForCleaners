@@ -1,5 +1,5 @@
 .customerContainer{
-  border: 2px solid #ff5722;
+  border: 2px solid $primaryColor;
   border-radius: 3rem;
   padding: 2rem;
   font-size: 1.5rem;
@@ -11,10 +11,10 @@
     .btnDeleteUser{
       height: fit-content;
       padding:.6rem .8rem;
-      border: solid #eeee .1rem;
+      border: solid $textColor .1rem;
       border-radius: 2rem;
-      color: #eeee;
-      background-color: #ff5722;
+      color: $textColor;
+      background-color: $primaryColor;
     }
   }
   .customerData div{

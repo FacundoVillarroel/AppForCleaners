@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, {useState, useContext, useEffect } from 'react'
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import { Eventcalendar, toast, localeDe } from '@mobiscroll/react';
 import { UserContext } from '../../context/UserContext';
@@ -10,7 +10,7 @@ const CalendarContainer = () => {
 
   const { usersList, currentUser } = useContext(UserContext)
 
-  const [myEvents, setEvents] = React.useState([]);
+  const [myEvents, setEvents] = useState([]);
 
   const user = usersList.find(user => user.name === currentUser)
 
@@ -58,7 +58,7 @@ const CalendarContainer = () => {
   }, []);
   
   return (
-    <div className='calendarContainer'>
+    <div className='calendarContainerMobiScroll'>
       <h2 className='text-center pt-5 mb-5 title'>CALENDAR</h2>
       <Eventcalendar
         theme="ios" 

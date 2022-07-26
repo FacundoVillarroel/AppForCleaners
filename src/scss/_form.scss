@@ -5,7 +5,7 @@
   align-items: center;
   padding-bottom: 3rem;
   input, select {
-    border: solid #ff5722 .15rem;
+    border: solid $primaryColor .15rem;
     padding: 1rem;
     margin-top: 2rem;
     border-radius: 2rem;
@@ -14,17 +14,17 @@
   .btnSend{
     font-size: 1.5rem;
     border-style:solid;
-    background-color: #ff5722;
-    color: #eeee;
-    border-color: #ff5722;
+    background-color: $primaryColor;
+    color: $textColor;
+    border-color: $primaryColor;
     margin-top: 5rem;
     padding: 1rem;
     width: 50%;
     border-radius: 2rem;
     &:hover{
-      background-color: #eeee;
-      color: #ff5722;
-      border-color: #ff5722;
+      background-color: $textColor;
+      color: $primaryColor;
+      border-color: $primaryColor;
     }
   }
 }
@@ -34,13 +34,13 @@
   width: 50%;
   justify-content: space-evenly;
   .btnAdd{
-    border: #ff5722 solid .2rem;
+    border: $primaryColor solid .2rem;
     border-radius: 2rem;
-    color: #303841;
+    color: $backGroundColor;
     padding: .8rem;
     &:hover{
-      background-color: #ff5722;
-      color: #eeee;
+      background-color: $primaryColor;
+      color: $textColor;
     }
   }
 }

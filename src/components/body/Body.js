@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 
 import UsersContainer from '../users/UsersContainer';
+import Calendar from '../calendar/Calendar';
 import CalendarContainer from '../calendarContainer/CalendarContainer';
 import CustomersContainer from "../customersContainer/CustomersContainer";
 import NewCustomerForm from '../newCustomer/NewCustomerForm';
@@ -18,6 +19,7 @@ const Body = () => {
         <UsersContainer/>
         { currentUser && 
           <>
+            {/* <Calendar/> */}
             <CalendarContainer/>
             <CustomersContainer/>
             <NewCustomerForm />

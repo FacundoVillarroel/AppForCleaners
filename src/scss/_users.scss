@@ -9,14 +9,14 @@
         margin: 0;
       }
       padding: 2rem;
-      border: 2px solid #ff5722;
+      border: 2px solid $primaryColor;
       border-radius: 2rem;
       cursor: pointer;
       margin-top: 3rem;
     }
     .currentUser{
-      color: #eeee;
-      background-color: #ff5722;
+      color: $textColor;
+      background-color: $primaryColor;
     }
   }
 }
